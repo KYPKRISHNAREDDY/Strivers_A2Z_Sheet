@@ -26,7 +26,7 @@ public class RemoveDuplicatesFromSortedArray {
         }
     }
 
-    static int[] removeDuplicates2(int arr[])
+    static int removeDuplicates2(int arr[])
     {
         int i=0;
         int j=i+1;
@@ -38,7 +38,7 @@ public class RemoveDuplicatesFromSortedArray {
             }
             j++;
         }
-        return
+        return i;
     }
 
 
@@ -47,5 +47,11 @@ public class RemoveDuplicatesFromSortedArray {
         removeDuplicates(arr);
         for(Integer x:arr)
             System.out.println(x);
+
+
+        int k=removeDuplicates2(arr);
+        for(int i=0;i<k;i++)
+            System.out.print(arr[i]+" `");
     }
+
 }
